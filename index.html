@@ -62,8 +62,27 @@
 
     <section class="wrap license">
       <div class="license__block">
-        <div class="license__img">
-          <img src="./assets/photo/license-01.png" alt="license" />
+        <div class="license__imgs">
+          <img
+            src="./assets/photo/license-01.png"
+            alt="license-01"
+            class="license__img license__img--active"
+          />
+          <img
+            src="./assets/photo/license-02.png"
+            alt="license-02"
+            class="license__img"
+          />
+          <img
+            src="./assets/photo/license-03.png"
+            alt="license-03"
+            class="license__img"
+          />
+          <div class="license__img-slider">
+            <div class="license__img-dot license__img-dot--active"></div>
+            <div class="license__img-dot"></div>
+            <div class="license__img-dot"></div>
+          </div>
         </div>
         <div class="license__download">
           <img src="./assets/icons/pdf.svg" alt="download pdf" />
@@ -184,11 +203,39 @@
         <blockquote>
           «Я рада, что Ученый совет АНО ВО МедСкиллс начал свою работу Ученый
           совет – это важный орган управления вузом, который призван обеспечить
-          его развитие и совершенствование. <br>Я уверена, что члены ученого
+          его развитие и совершенствование. <br />Я уверена, что члены ученого
           совета будут работать с полной отдачей, и мы вместе сможем добиться
           больших результатов»
         </blockquote>
       </div>
     </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const images = document.querySelectorAll('.license__img')
+        const dots = document.querySelectorAll('.license__img-dot')
+        let currentIndex = 0
+
+        function switchImage(index) {
+          images.forEach((img) => img.classList.remove('license__img--active'))
+          dots.forEach((dot) =>
+            dot.classList.remove('license__img-dot--active')
+          )
+
+          images[index].classList.add('license__img--active')
+          dots[index].classList.add('license__img-dot--active')
+
+          currentIndex = index
+        }
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            switchImage(index)
+          })
+        })
+
+        switchImage(currentIndex)
+      })
+    </script>
   </body>
 </html>
