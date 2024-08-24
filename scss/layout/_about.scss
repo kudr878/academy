@@ -101,5 +101,11 @@
     &__banner {
       display: none;
     }
+
+    &__list {
+      &-item {
+        font-size: 20px;
+      }
+    }
   }
 }

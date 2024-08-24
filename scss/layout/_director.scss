@@ -12,7 +12,7 @@
     margin-bottom: 40px;
     line-height: 72px;
 
-    img{
+    img {
       margin-left: 10px;
     }
   }
@@ -53,13 +53,31 @@
     }
 
     blockquote {
-      background-color: #F3F6FF;
+      background-color: #f3f6ff;
       padding: 20px;
       border-radius: 20px;
       font-weight: 500;
       font-style: italic;
       font-size: 18px;
       line-height: 28px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .director {
+    flex-direction: column;
+
+    &__title {
+      img {
+        display: none;
+      }
+    }
+    &__text {
+      margin-left: 0;
+    }
+    &__img {
+      margin-bottom: 20px;
     }
   }
 }
