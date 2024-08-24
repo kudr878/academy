@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  max-width: 1202px;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url('../assets/fonts/museosanscyrl-300.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url('../assets/fonts/museosanscyrl-500italic.ttf');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url('../assets/fonts/museosanscyrl-500.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url('../assets/fonts/museosanscyrl-700.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
